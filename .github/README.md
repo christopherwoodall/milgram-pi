@@ -31,7 +31,7 @@ Next, connect the black wire from the TENS unit connector to the plug labeled Co
 
 Shoutout Google Lens.
 
-![](docs/lens.png)
+![](docs/lens.jpg)
 
 
 Wire the VCC and GND pins to the Raspberry Pi's 5V and GND pins, respectively. Finally, connect the IN pin to GPIO 21 on the Raspberry Pi.
