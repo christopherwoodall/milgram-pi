@@ -29,7 +29,7 @@ Next, connect the black wire from the TENS unit connector to the plug labeled Co
 ![](docs/step2.jpg)
 
 
-Shoutout Google Lens.
+Shoutout Google Lens (make sure to get the right relay).
 
 ![](docs/lens.jpg)
 
