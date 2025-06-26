@@ -15,6 +15,9 @@ readme      = ".github/README.md"
 license     = "MIT"
 
 dependencies = [
+    "black",
+    "isort",
+    "mcp[cli]",
 ]
 
 
