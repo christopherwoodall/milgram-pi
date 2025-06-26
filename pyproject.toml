@@ -19,6 +19,7 @@ dependencies = [
     "isort",
     "mcp[cli]",
     "RPi.GPIO",
+    "starlette",
 ]
 
 [tool.hatch.build]
