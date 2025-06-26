@@ -46,3 +46,4 @@ Inspired by Tim Keeley's [shockbot](https://www.instructables.com/Shockbot/) pro
 ## Resources
 - [Milgram Experiment](https://en.wikipedia.org/wiki/Milgram_experiment)
 - [Adding Remote MCP Servers](https://support.anthropic.com/en/articles/11175166-getting-started-with-custom-integrations-using-remote-mcp)
+- [Remote MCP Servers in Python](https://shivdeepak.com/posts/lets-write-a-remote-mcp-server/)
