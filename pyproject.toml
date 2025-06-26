@@ -1,5 +1,5 @@
 [project.scripts]
-milgram-pi = ""
+milgram-pi = "server:main"
 
 [build-system]
 requires = ["hatchling>=1.11.0"]
@@ -18,8 +18,8 @@ dependencies = [
     "black",
     "isort",
     "mcp[cli]",
+    "RPi.GPIO",
 ]
-
 
 [tool.hatch.build]
 ignore-vcs = false
