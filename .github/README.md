@@ -21,22 +21,22 @@ milgram-pi
 
 Begin by slicing the black wire from a TENS unit connector about 4" from the end. Strip the ends of the wire to expose the copper.
 
-{{{{INSERT IMAGE HERE}}}}
+![](docs/step1.jpg)
 
 
 Next, connect the black wire from the TENS unit connector to the plug labeled Common (COM) on the relay module. Connect the other end to the plug labeled Normally Open (NO).
 
-{{{{INSERT IMAGE HERE}}}}
+![](docs/step2.jpg)
 
 
 Shoutout Google Lens.
 
-{{{{INSERT IMAGE HERE}}}}
+![Google Lens Screenshot](docs/lens.png)
 
 
 Wire the VCC and GND pins to the Raspberry Pi's 5V and GND pins, respectively. Finally, connect the IN pin to GPIO 21 on the Raspberry Pi.
 
-{{{{INSERT IMAGE HERE}}}}
+![](docs/final.jpg)
 
 
 ## Acknowledgements
