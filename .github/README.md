@@ -1,5 +1,5 @@
 # Milgram-Pi
-Proxy local MCP calls to a Raspberry Pi to control a relay module.
+Proxy local MCP calls to a Raspberry Pi in order to control a relay module.
 
 ## Bill of Materials
 - Raspberry Pi
