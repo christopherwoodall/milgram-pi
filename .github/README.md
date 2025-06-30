@@ -10,6 +10,8 @@ Run Stanley Milgram's famous experiment with a Raspberry Pi and MCP.
 ## Getting Started
 Flash the Raspberry Pi with the OS of your choice and enable SSH. Follow the pinout and wiring guide to connect the Raspberry Pi to the relay module and the TENS unit. After that run the following commands to install the required libraries and run the script.
 
+![](docs/sequence_diagram.jpg)
+
 ### On the Host
 
 ```
