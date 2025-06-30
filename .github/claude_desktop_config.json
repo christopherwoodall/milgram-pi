@@ -1,12 +1,12 @@
 {
   "mcpServers": {
-    "milgram": {
+    "relay": {
       "command": "npx",
       "args": [
         "-y",
-        "mcp-remote",
-        "http://192.168.0.214:8000/sse",
-        " --allow-http"
+        "mcp",
+        "run",
+        "src/server.py"
       ],
       "autoStart": true
     }
