@@ -1,16 +1,16 @@
-# Milgram Pi
-## Use at your own risk.
-Run Stanley Milgram's famous experiment with a Raspberry Pi and MCP.
+# Milgram-Pi
+Proxy local MCP calls to a Raspberry Pi to control a relay module.
 
 ## Bill of Materials
 - Raspberry Pi
-- TENS Unit
 - Relay Module
 
 ## Getting Started
-Flash the Raspberry Pi with the OS of your choice and enable SSH. Follow the pinout and wiring guide to connect the Raspberry Pi to the relay module and the TENS unit. After that run the following commands to install the required libraries and run the script.
 
 ![](docs/sequence_diagram.jpg)
+
+Flash the Raspberry Pi with the OS of your choice and enable SSH. Follow the pinout and wiring guide to connect the Raspberry Pi and the relay module. After that run the following commands to install the required libraries and run the scripts.
+
 
 ### On the Host
 
@@ -30,6 +30,7 @@ pip install -e .
 
 MILGRAM_MODE=remote milgram-pi
 ```
+
 
 ## Wiring Guide
 
@@ -55,4 +56,3 @@ Wire the VCC and GND pins to the Raspberry Pi's 5V and GND pins, respectively. F
 
 ## Acknowledgements
 Inspired by Tim Keeley's [shockbot](https://www.instructables.com/Shockbot/) project.
-
