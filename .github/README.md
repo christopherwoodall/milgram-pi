@@ -15,6 +15,11 @@ Flash the Raspberry Pi with the OS of your choice and enable SSH. Follow the pin
 ### On the Host
 
 ```
+git clone https://github.com/christopherwoodall/milgram-pi.git
+cd milgram-pi
+pip install -e .
+
+mcp dev src/server.py
 ```
 
 ### On the Pi
@@ -22,6 +27,7 @@ Flash the Raspberry Pi with the OS of your choice and enable SSH. Follow the pin
 git clone https://github.com/christopherwoodall/milgram-pi.git
 cd milgram-pi
 pip install -e .
+
 MILGRAM_MODE=remote milgram-pi
 ```
 
@@ -50,8 +56,3 @@ Wire the VCC and GND pins to the Raspberry Pi's 5V and GND pins, respectively. F
 ## Acknowledgements
 Inspired by Tim Keeley's [shockbot](https://www.instructables.com/Shockbot/) project.
 
-
-## Resources
-- [Milgram Experiment](https://en.wikipedia.org/wiki/Milgram_experiment)
-- [Adding Remote MCP Servers](https://support.anthropic.com/en/articles/11175166-getting-started-with-custom-integrations-using-remote-mcp)
-- [Remote MCP Servers in Python](https://shivdeepak.com/posts/lets-write-a-remote-mcp-server/)
