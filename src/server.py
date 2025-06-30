@@ -1,45 +1,23 @@
-import uvicorn
-import RPi.GPIO as GPIO
-from mcp.server.fastmcp import FastMCP
-from starlette.applications import Starlette
-from starlette.routing import Mount
-
-from tools.relay import toggle as toggle_relay
-
-
-PIN = 22
-mcp = FastMCP("Milgram Experiment MCP Server")
-
-
-@mcp.tool()
-def perform_shock(intensity: int = 1):
-  """
-  Perform a shock with the specified intensity.
-
-  Args:
-    intensity (int): The intensity of the shock (default is 1).
-  Returns:
-    None
-  """
-  toggle_relay(PIN, timeout=intensity)
+import os
 
 
 def main():
-  print("!!! MODIFY OWN RISK !!!")
+  """
+  This is a routing mechanism for `remote.py` and `proxy.py`.
+  This script will determine which configuration to run
+  based on the environment variable `MILGRAM_MODE`.
+  If `MILGRAM_MODE` is set to "remote", it will run the remote server.
+  If it is not set or set to any other value, it will run the local server.
+  """
 
-  # GPIO.setwarnings(False)
-  # GPIO.setmode(GPIO.BCM)
-  # GPIO.setup(PIN, GPIO.OUT, initial=GPIO.LOW)
+  mode = os.getenv("MILGRAM_MODE", "local")
 
-  # app = Starlette(
-  #   routes=[
-  #       Mount("/", app=mcp.sse_app()),
-  #   ]
-  # )
-
-  # uvicorn.run(app, host="0.0.0.0", port=8000)
-
-  # GPIO.cleanup()
+  if mode == "remote":
+    import remote
+    remote.main()
+  else:
+    import proxy
+    proxy.main()
 
 
 if __name__ == "__main__":
