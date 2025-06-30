@@ -1,14 +1,13 @@
 # Milgram-Pi
 Proxy local MCP calls to a Raspberry Pi in order to control a relay module.
 
+![](docs/sequence_diagram.jpg)
+
 ## Bill of Materials
 - Raspberry Pi
 - Relay Module
 
 ## Getting Started
-
-![](docs/sequence_diagram.jpg)
-
 Flash the Raspberry Pi with the OS of your choice and enable SSH. Follow the pinout and wiring guide to connect the Raspberry Pi and the relay module. After that run the following commands to install the required libraries and run the scripts.
 
 
