@@ -18,8 +18,12 @@ dependencies = [
     "black",
     "isort",
     "mcp[cli]",
-    "RPi.GPIO",
+    "rpi-gpio",
     "flask",
+    "requests",
+    "uvicorn",
+    "starlette",
+    "uv",
 ]
 
 [tool.hatch.build]
