@@ -1,13 +1,17 @@
 import requests
+import uvicorn
 
 from mcp.server.fastmcp import FastMCP
 
+from starlette.applications import Starlette
+from starlette.routing import Mount
 
-mcp = FastMCP("Raspberry Pi Relay Toggle MCP Server")
+
+mcp = mcp = FastMCP("Raspberry Pi Relay Toggle MCP Server")
 
 
 @mcp.tool()
-def activate(duration: int = 1, host: str = "localhost", port: int = 5000) -> dict:
+def activate(duration: int = 1, host: str = "192.168.0.214", port: int = 5000) -> dict:
   """
     Sends a post request to the IP address of the Raspberry Pi to activate the relay for a specified duration.
     The default port is 5000.
@@ -26,9 +30,16 @@ def activate(duration: int = 1, host: str = "localhost", port: int = 5000) -> di
     return {"status": "error", "message": str(e)}
 
 
+app = Starlette(
+  routes=[
+    Mount("/", app=mcp.sse_app()),
+  ]
+)
+
+
 def main():
-  mcp.run(transport="stdio")
+  uvicorn.run(app, host="127.0.0.1", port=8000)
 
 
 if __name__ == "__main__":
-  mcp.run(transport="stdio")
+  main()
