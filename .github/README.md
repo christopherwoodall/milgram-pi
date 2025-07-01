@@ -18,7 +18,7 @@ git clone https://github.com/christopherwoodall/milgram-pi.git
 cd milgram-pi
 pip install -e .
 
-mcp dev src/server.py
+uv run python src/proxy.py
 ```
 
 ### On the Pi
@@ -53,5 +53,6 @@ Wire the VCC and GND pins to the Raspberry Pi's 5V and GND pins, respectively. F
 ![](docs/final.jpg)
 
 
-## Acknowledgements
-Inspired by Tim Keeley's [shockbot](https://www.instructables.com/Shockbot/) project.
+## Resources
+- [shockbot](https://www.instructables.com/Shockbot/)
+- [Remote MCP Servers](https://shivdeepak.com/posts/lets-write-a-remote-mcp-server/)
